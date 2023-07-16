@@ -1,0 +1,112 @@
+﻿<Application x:Class="SQL_Group_4115_4212.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
+             StartupUri="SelectionPage.xaml">
+    <Application.Resources>
+        <Style x:Key="mainbutton" TargetType="Button">
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="Width" Value="186"/>
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="FontWeight" Value="DemiBold"/>
+            <Setter Property="Foreground" Value="FloralWhite"/>
+            <Setter Property="Background" Value="Transparent" />
+
+            <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" BorderThickness="1.5" BorderBrush="White" Padding="10" CornerRadius="15">
+                            <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="Gray"/>
+                    <Setter Property="Foreground" Value="DarkBlue"/>
+
+                </Trigger>
+                <Trigger Property="IsMouseCaptured" Value="True">
+                    <Setter Property="Background" Value="LightBlue"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="crudBtn" TargetType="Button">
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="Width" Value="186"/>
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="FontWeight" Value="DemiBold"/>
+            <Setter Property="Foreground" Value="FloralWhite"/>
+            <Setter Property="Background" Value="Gray" />
+
+            <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" BorderThickness="1.5" BorderBrush="White" Padding="10" CornerRadius="15">
+                            <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="Gray"/>
+                    <Setter Property="Foreground" Value="DarkBlue"/>
+
+                </Trigger>
+                <Trigger Property="IsMouseCaptured" Value="True">
+                    <Setter Property="Background" Value="LightBlue"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="textbox" TargetType="TextBox">
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="Width" Value="186"/>
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="Foreground" Value="white"/>
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="BorderBrush" Value="AntiqueWhite"/>
+            <Setter Property="Margin" Value="40 00 40 00" />
+
+            <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+
+        </Style>
+
+        <Style x:Key="textblock" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="Width" Value="186"/>
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="Foreground" Value="FloralWhite"/>
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="Margin" Value="40 00 40 00" />
+
+            <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+
+        </Style>
+
+
+        <Style x:Key="label" TargetType="Label">
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="FontWeight" Value="DemiBold"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="Width" Value="186"/>
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="Foreground" Value="AntiqueWhite"/>
+            <Setter Property="Background" Value="Transparent" />
+
+            <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+
+        </Style>
+        
+
+    </Application.Resources>
+</Application>

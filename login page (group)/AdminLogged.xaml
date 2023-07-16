@@ -1,0 +1,14 @@
+﻿<Window x:Class="SQL_Group_4115_4212.AdminLogged"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SQL_Group_4115_4212"
+        mc:Ignorable="d"
+        Title="AdminLogged" Height="450" Width="400">
+    <Grid>
+        <Button Content="Edit List of Users" Width="200" Background="Azure" Foreground="Black" HorizontalAlignment="Center" FontSize="20" Margin="0,192,0,192"/>
+        <Button  Click="Button6_Click" Content="Add New Users" Width="200" Background="Azure" Foreground="Black" HorizontalAlignment="Center" FontSize="20" Margin="0,100,0,284" />
+        <Button Content="Add marks/GPA" Width="200" Background="Azure" Foreground="Black" HorizontalAlignment="Center" FontSize="20" Margin="0,284,0,100"/>
+    </Grid>
+</Window>

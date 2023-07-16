@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <RootNamespace>login_page__group_</RootNamespace>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\2314983.jpg" />
+    <None Remove="Images\download %281%29.jpg" />
+    <None Remove="Images\images.jpg" />
+    <None Remove="New Folder\WhatsApp Image 2023-06-06 at 10.07.37 AM.jpeg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\.editorconfig" Link=".editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.1" />
+    <PackageReference Include="MahApps.Metro.IconPacks.Material" Version="4.11.0" />
+    <PackageReference Include="Microsoft.Data.Sqlite.Core" Version="8.0.0-preview.6.23329.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.0-preview.6.23329.4" />
+    <PackageReference Include="System.Data.SQLite" Version="1.0.118" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\2314983.jpg" />
+    <Resource Include="Images\download (1).jpg" />
+    <Resource Include="Images\images.jpg" />
+    <Resource Include="New Folder\WhatsApp Image 2023-06-06 at 10.07.37 AM.jpeg" />
+  </ItemGroup>
+
+</Project>

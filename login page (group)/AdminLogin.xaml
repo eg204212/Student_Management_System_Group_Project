@@ -1,0 +1,34 @@
+﻿<Window x:Class="SQL_Group_4115_4212.AdminLogin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SQL_Group_4115_4212"
+        mc:Ignorable="d"
+        Title="AdminLogin" Height="450" Width="400"
+         WindowStyle="None">
+
+    <Window.Resources>
+        <ImageBrush x:Key="BackgroundBrush" ImageSource="/Images/images.jpg"/>
+    </Window.Resources>
+
+    <Grid Background="{StaticResource BackgroundBrush}">
+        <StackPanel Height="450" Width="400" >
+            <StackPanel Orientation="Vertical" Height="433">
+                <Label Height="50" 
+                       Margin="30 " RenderTransformOrigin="0.488,-3.374" Content="Admin Login" HorizontalAlignment="Center" FontSize="30" Foreground="BlanchedAlmond" FontWeight="DemiBold"/>
+                <Label Style="{StaticResource label}"
+                    Content="Admin Name"  Height="33" Width="200"/>
+                <TextBox Style="{StaticResource textbox}" x:Name="AdminNameText" Height="30" Width="200" Margin="10" Background="Black"/>
+                <Label Style="{StaticResource label}" Content="Admin Password"  Height="31" Width="200" Margin="10" HorizontalAlignment="Center"/>
+                <PasswordBox x:Name="AdminPasswordText" FontSize="15" Foreground="White" Height="30" Width="200"  Margin="10" Background="Black"/>
+                <Button Style="{StaticResource ResourceKey=mainbutton}"
+                    Click="Button5_Click" Height="45" Width="100" Content="Login" HorizontalAlignment="Center" Margin="10"/>
+                <Button Style="{StaticResource mainbutton}"
+                    Click="ExitBtn_Click"
+                    x:Name="ExitBtn" Content="Exit" Height="45" Width="100" Margin="0"/>
+            </StackPanel>
+        </StackPanel>
+
+    </Grid>
+</Window>

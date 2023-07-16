@@ -1,0 +1,74 @@
+﻿<Window x:Class="SQL_Group_4115_4212.RegistrationForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SQL_Group_4115_4212"
+        mc:Ignorable="d"
+        Title="RegistationForm" Height="650" Width="450"  WindowStyle="None">
+
+    <Window.Resources>
+        <ImageBrush x:Key="BackgroundBrush" ImageSource="/Images/images.jpg"/>
+    </Window.Resources>
+
+    <Grid Background="{StaticResource BackgroundBrush}">
+        <StackPanel Height="550" Width="450">
+            <TextBlock Style="{StaticResource textblock}"
+                Text="User Registation Form" Margin="50 20 50 50" FontSize="30" Height="50" Width="300" />
+            <TextBlock Style="{StaticResource textblock}"
+                Text="First Name" FontSize="15" Height="20" Width="80" Margin="-250 -30 50 50" />
+            <TextBox Style="{StaticResource textbox}"
+                x:Name="FirstnameTextBox" 
+                Text="{Binding Firstname, UpdateSourceTrigger=PropertyChanged}" 
+                Margin="130 -70 50 50 " Grid.Column="1" Height="20" Width="200"/>
+            <TextBlock Style="{StaticResource textblock}"
+                       Text="Last Name" FontSize="15" Height="20" Width="80" Margin="-250 -30 50 50" />
+            <TextBox Style="{StaticResource textbox}"
+                x:Name="LastnameTextBox" Text="{Binding Lastname, UpdateSourceTrigger=PropertyChanged}"
+                     Margin="130 -70 50 50 " Grid.Column="1" Height="20" Width="200"/>
+            <TextBlock Style="{StaticResource textblock}"
+                       Text="ID Number" FontSize="15" 
+                       Height="20" Width="80" Margin="-250 -30 50 50" />
+            <TextBox Style="{StaticResource textbox}"
+                     x:Name="IdTextBox" Text="{Binding IDNumber, UpdateSourceTrigger=PropertyChanged}" 
+                     Margin="130 -70 50 50 " Grid.Column="1" Height="20" Width="200"/>
+            <TextBlock Style="{StaticResource textblock}"
+                       Text="Student Email" FontSize="15" Height="20" Width="100" Margin="-230 -30 50 50" />
+            <TextBox Style="{StaticResource textbox}"
+                     x:Name="StudentEmailTextBox" Text="{Binding StudentEmail, UpdateSourceTrigger=PropertyChanged}" 
+                     Margin="130 -70 50 50 " Grid.Column="1" Height="20" Width="200"/>
+            <TextBlock Style="{StaticResource textblock}"
+                       Text="Address" FontSize="15" Height="20" Width="80" Margin="-250 -30 50 50" />
+            <TextBox Style="{StaticResource textbox}" 
+                     x:Name="AddressTextBox" Text="{Binding Address, UpdateSourceTrigger=PropertyChanged}" 
+                     Margin="130 -70 50 50 " Grid.Column="1" Height="20" Width="200"/>
+            <CheckBox x:Name="EnableCheckBox" Content="Edit" 
+                      HorizontalAlignment="Left" 
+                      Margin="35 -30 50 50" FontSize="15" Width="84"
+                      Foreground="AntiqueWhite"/>
+            <Grid x:Name="EditGrid" IsEnabled="{Binding ElementName=EnableCheckBox, Path=IsChecked}" Margin="35 -20 50 -20" Grid.ColumnSpan="2" Height="150" Width="363">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="85*"/>
+                    <ColumnDefinition Width="278*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Style="{StaticResource textblock}"
+                    Text="Add your User Name" FontSize="15" Width="150" Margin="-8,-17,221,142" Grid.ColumnSpan="2" Background="Transparent"/>
+                <TextBox x:Name="RegUsernameTextBox" Text="{Binding NewUserName, UpdateSourceTrigger=PropertyChanged}" Margin="10,13,43,0" Height="20" Width="310" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+                <TextBlock Style="{StaticResource textblock}"
+                           Background="Transparent"
+                           Text="Apply your Password" FontSize="15" Height="30" Width="NaN" Margin="-8,38,162,82" Grid.ColumnSpan="2" />
+                <TextBox x:Name="RegPasswordTextBox" Text="{Binding NewPassword, UpdateSourceTrigger=PropertyChanged}" Margin="10,75,43,55" Height="20" Width="310" Grid.ColumnSpan="2"/>
+            </Grid>
+            <Button Style="{StaticResource mainbutton}"
+                    HorizontalAlignment="Center"
+                    x:Name="save_btn" Content="Save" FontSize="20" Margin="0 -30 50 10" Height="46" Width="152"  
+                    Click="save_btn_Click"/>
+            <Button Style="{StaticResource mainbutton}"
+                    HorizontalAlignment="Center"
+                    Click="ExitBtn_Click"
+                    x:Name="ExitBtn" Content="Exit" Height="46" Width="152" Margin="0 0 50 10" FontSize="20"/>
+
+        </StackPanel>
+
+    </Grid>
+</Window>

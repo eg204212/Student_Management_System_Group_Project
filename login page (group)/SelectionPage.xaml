@@ -1,0 +1,34 @@
+﻿<Window x:Class="SQL_Group_4115_4212.SelectionPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SQL_Group_4115_4212"
+        xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        mc:Ignorable="d"
+        Title="SelectionPage" Height="450" Width="400"
+        WindowStyle="None">
+    <Window.Resources>
+        <ImageBrush x:Key="BackgroundBrush" ImageSource="/Images/images.jpg"/>
+    </Window.Resources>
+
+
+    <Grid Background="{StaticResource BackgroundBrush}">
+        <StackPanel Orientation="Vertical">
+            <Label Style="{StaticResource label}" 
+                   Content="Welcome!" Margin="30 30 30 10" FontSize="30" Height="56" Width="202"/>
+            <Image Source="Images/download (1).jpg" Height="80" Width="80" Stretch="Uniform"/>
+
+
+            <Button Style="{StaticResource mainbutton}" x:Name="UserBtn" Click="UserBtn_Click" 
+                Content="USER" Margin="0 30 0 30" Height="50" 
+                Width="160" Background="Azure" Foreground="Black" RenderTransformOrigin="0.473,0.936">
+            </Button>
+            <Button Style="{StaticResource mainbutton}"
+            Click="AdminBtn_Click" Content="ADMIN" Height="50" Width="160" Background="Azure" Foreground="Black"/>
+
+        </StackPanel>
+
+        
+    </Grid>
+</Window>
